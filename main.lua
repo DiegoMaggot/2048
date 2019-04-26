@@ -10,14 +10,6 @@ function criarTabela(tamanho)
         end
     end
 end
---zerar tabela
-function zerarTabela()
-    for i = 1, getTamanho(tabela) do  
-        for j = 1, getTamanho(tabela) do
-            tabela[i][j] = 0
-        end
-    end
-end
 
 --mostra o tabuleiro
 function mostrar(tabela)
