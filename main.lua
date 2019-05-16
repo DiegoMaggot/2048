@@ -1,4 +1,5 @@
 esp = require 'posix'
+math.randomseed(os.time())
 --cria o tabuleiro 4x4
 tabela = {}
 --sempre vai criar uma matriz quadrada linhas == colunas
@@ -55,8 +56,6 @@ end
 
 --gerar o valor da nova peça um número entre 2(70%) e 4(30%)
 function novaPeca()
-    math.randomseed(os.time())
-    esp.sleep(1)
     num = math.random(10);
     if(num <= 7) then
         return 2
@@ -67,8 +66,6 @@ end
 
 --gera um valor aleatório para linha/coluna da nova peca
 function getPosicao()
-    math.randomseed(os.time())
-    esp.sleep(1)
     return math.random(getTamanho(tabela))
 end
 
